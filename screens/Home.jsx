@@ -69,7 +69,7 @@ const Home = ({ navigation }) => {
     var destinationStyle = {};
 
     if (index == 0) {
-      destinationStyle = { marginLeft: SIZES.padding, }
+      destinationStyle = { marginLeft: SIZES.padding }
     }
 
     return (
@@ -87,7 +87,7 @@ const Home = ({ navigation }) => {
           }}
         />
 
-        <Text style={{ marginTop: SIZES.base / 2 }}>{item.name}</Text>
+        <Text style={{ marginTop: SIZES.base / 2, fontSize: 18 }}>{item.name}</Text>
       </TouchableOpacity>
     )
   }
@@ -167,7 +167,7 @@ const Home = ({ navigation }) => {
 
       {/* Destination */}
       <View style={{ flex: 1 }}>
-        <Text style={{ marginTop: SIZES.base, marginHorizontal: SIZES.padding }}>Destination</Text>
+        <Text style={{ marginTop: SIZES.base, marginHorizontal: SIZES.padding, fontSize: 22, fontWeight: "bold" }}>Destination</Text>
         <FlatList
           horizontal
           showsHorizontalScrollIndicator={false}
