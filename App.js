@@ -65,7 +65,7 @@ const App = () => {
         />
 
         {/* Tabs */}
-        < Stack.Screen
+        <Stack.Screen
           name="Home"
           component={Tabs}
           options={{
@@ -108,7 +108,7 @@ const App = () => {
 
 
       </Stack.Navigator>
-    </NavigationContainer >
+    </NavigationContainer>
   );
 };
 

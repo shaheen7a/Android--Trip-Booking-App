@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import {
   StyleSheet,
   SafeAreaView,
@@ -7,14 +7,13 @@ import {
   Image,
   TouchableOpacity
 } from 'react-native';
-import LinearGradient from 'react-native-linear-gradient';
 
-import { images, COLORS, FONTS, SIZES } from '../constants';
+import {LinearGradient} from 'expo-linear-gradient';
+
+
+import { images, COLORS, SIZES } from '../constants';
 
 const Onboarding = ({ navigation }) => {
-
-  // Render
-
   return (
     <SafeAreaView style={styles.container}>
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -30,8 +29,8 @@ const Onboarding = ({ navigation }) => {
 
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <View style={{ alignItems: 'center', marginHorizontal: SIZES.padding }}>
-          <Text style={{ ...FONTS.h2 }}>Digital Ticket</Text>
-          <Text style={{ color: COLORS.gray, marginTop: SIZES.padding, textAlign: 'center', ...FONTS.body3 }}>Easy solution to buy tickets for your travel, business trips, transportation, lodging and culinary.</Text>
+          <Text style={{ fontSize: 24, fontWeight: "bold" }}>Digital Ticket</Text>
+          <Text style={{ color: COLORS.gray, marginTop: SIZES.padding, textAlign: 'center' }}>Easy solution to buy tickets for your travel, business trips, transportation, lodging and culinary.</Text>
         </View>
 
         <TouchableOpacity
@@ -44,13 +43,13 @@ const Onboarding = ({ navigation }) => {
             start={{ x: 0, y: 0 }}
             end={{ x: 1, y: 0 }}
           >
-            <Text style={{ color: COLORS.white, ...FONTS.h3 }}>Start !</Text>
+            <Text style={{ color: COLORS.white }}>Start !</Text>
           </LinearGradient>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -70,4 +69,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Onboarding;
+export default Onboarding

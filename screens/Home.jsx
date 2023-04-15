@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {
   StyleSheet,
@@ -8,9 +7,9 @@ import {
   TouchableOpacity,
   FlatList
 } from 'react-native';
-import LinearGradient from 'react-native-linear-gradient';
+import {LinearGradient} from 'expo-linear-gradient';
 
-import { images, icons, COLORS, FONTS, SIZES } from '../constants';
+import { images, icons, COLORS, SIZES } from '../constants';
 
 const OptionItem = ({ bgColor, icon, label, onPress }) => {
   return (
@@ -36,14 +35,13 @@ const OptionItem = ({ bgColor, icon, label, onPress }) => {
           />
         </LinearGradient>
       </View>
-      <Text style={{ marginTop: SIZES.base, color: COLORS.gray, ...FONTS.body3 }}>{label}</Text>
+      <Text style={{ marginTop: SIZES.base, color: COLORS.gray }}>{label}</Text>
     </TouchableOpacity>
   )
 }
 
 const Home = ({ navigation }) => {
 
-  // Dummy Data
   const [destinations, setDestinations] = React.useState([
     {
       id: 0,
@@ -67,8 +65,6 @@ const Home = ({ navigation }) => {
     },
   ]);
 
-  // Render
-
   function renderDestinations(item, index) {
     var destinationStyle = {};
 
@@ -91,10 +87,11 @@ const Home = ({ navigation }) => {
           }}
         />
 
-        <Text style={{ marginTop: SIZES.base / 2, ...FONTS.h4 }}>{item.name}</Text>
+        <Text style={{ marginTop: SIZES.base / 2 }}>{item.name}</Text>
       </TouchableOpacity>
     )
   }
+
 
   return (
     <View style={styles.container}>
@@ -170,7 +167,7 @@ const Home = ({ navigation }) => {
 
       {/* Destination */}
       <View style={{ flex: 1 }}>
-        <Text style={{ marginTop: SIZES.base, marginHorizontal: SIZES.padding, ...FONTS.h2 }}>Destination</Text>
+        <Text style={{ marginTop: SIZES.base, marginHorizontal: SIZES.padding }}>Destination</Text>
         <FlatList
           horizontal
           showsHorizontalScrollIndicator={false}
@@ -180,8 +177,8 @@ const Home = ({ navigation }) => {
         />
       </View>
     </View>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -201,4 +198,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Home;
+export default Home
