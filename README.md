@@ -2,7 +2,7 @@
 ## Welcome! 👋
 
 Thanks for checking out this Application.
-Trip booking app, help any customers in buying ticket, travel, transportation, lodging and culinary.
+Trip booking app (UI Only), designed to assist customers in purchasing tickets, planning travel itineraries, arranging transportation, finding accommodation, and exploring culinary experiences. With just one app, customers can conveniently access all these services, ensuring a seamless and enjoyable travel experience.
 
 ![Trip Booking App](./showcase/view01.png)
 
